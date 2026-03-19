@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleetwood Electrical Services | Professional Electrician Fleetwood</title>
+    <meta name="description" content="Fleetwood Electrical Services - Trusted electrical services in Fleetwood. Call 01253 123456 for emergency electrical, installations, and repairs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Electrician Brand Colors - Trust & Clean */
+            --primary: #0274BD;
+            --primary-light: #51d0de;
+            --secondary: #51d0de;
+            --accent: #F57251;
+            --success: #10b981;
+            
+            /* Neutrals */
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --border: #e2e8f0;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #1561ad 0%, #1dbab4 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(21, 97, 173, 0.95) 0%, rgba(29, 186, 180, 0.95) 100%);
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-white);
+        }
+        
+        /* Header */
+        header {
+            background: var(--bg-white);
+            padding: 1.25rem 2rem;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Hero */
+        .hero {
+            background: 
+                var(--gradient-hero),
+                url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+            background-size: cover, 30px 30px;
+            background-position: center;
+            color: white;
+            padding: 9rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(29, 186, 180, 0.15) 0%, transparent 60%),
+                        radial-gradient(circle at 70% 80%, rgba(21, 97, 173, 0.15) 0%, transparent 60%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.625rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-md);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero p {
+            font-size: 1.375rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            background: var(--success);
+            color: white;
+            padding: 1.125rem 2.5rem;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+        }
+        
+        .cta-button-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .cta-button-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 3.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Services Grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--gradient-primary);
+            transition: height 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-card:hover::before {
+            height: 100%;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.25rem;
+            filter: grayscale(0.3);
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Our Work Gallery */
+        .our-work {
+            background: var(--bg-light);
+            padding: var(--spacing-xl) 2rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.75rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+            color: white;
+            padding: 2.5rem 1.25rem 1.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            padding-bottom: 1.75rem;
+        }
+        
+        /* Trust Section */
+        .trust {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 2rem;
+        }
+        
+        .trust-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.5rem;
+            text-align: center;
+        }
+        
+        .trust-item {
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-4px);
+        }
+        
+        .trust-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.25rem;
+            display: inline-block;
+            padding: 1.25rem;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .trust-item h3 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+        
+        .trust-item p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--gradient-primary);
+            color: white;
+            padding: var(--spacing-xl) 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .contact-subtitle {
+            font-size: 1.375rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            font-size: 1.625rem;
+            margin: 1.75rem 0;
+            font-weight: 600;
+        }
+        
+        .contact-info a {
+            color: var(--success);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+        
+        footer p {
+            margin: 0.625rem 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero p {
+                font-size: 1.125rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+            }
+            
+            .services, .gallery, .trust-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Fleetwood Electrical Services</div>
+            <a href="tel:01253 123456" class="header-cta">📞 01253 123456</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">⚡ 24/7 EMERGENCY SERVICE - FREE SAFETY CHECKS</div>
+            <h1>Fleetwood's #1 Rated Emergency Electrician</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 1.5rem;">Fast Response Times | Part P Registered | Fully Insured</p>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 800;">30+</div>
+                    <div style="font-size: 0.95rem; opacity: 0.9;">Years in Business</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 800;">500+</div>
+                    <div style="font-size: 0.95rem; opacity: 0.9;">Happy Customers</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 800;">★★★★★</div>
+                    <div style="font-size: 0.95rem; opacity: 0.9;">5.0 Rating</div>
+                </div>
+            </div>
+            <div class="cta-group">
+                <a href="tel:01253 123456" class="cta-button">📞 Call Now: 01253 123456</a>
+                <a href="#contact" class="cta-button cta-button-secondary">Free Quote in 24 Hours</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Complete Electrical Services Across Fleetwood</h2>
+        <p class="section-subtitle">From emergency repairs to full installations - we do it all to the highest standard</p>
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3>24/7 Emergency Electrical</h3>
+                <p>Burst pipe? Leak emergency? We're here within the hour. Fast response, permanent fixes, no mess left behind.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Repairs & Maintenance</h3>
+                <p>Dripping taps, running toilets, slow drains - we fix it right the first time. Guaranteed workmanship.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚿</div>
+                <h3>Bathroom Renovations</h3>
+                <p>Transform your bathroom with our complete installation service. Modern designs, expert fitting, stunning results.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔥</div>
+                <h3>Boiler Installation & Repair</h3>
+                <p>Part P certified engineers. Save up to 30% on energy bills with a new A-rated boiler. Finance available.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Central Heating Systems</h3>
+                <p>Warm home, lower bills. Expert radiator installation, system upgrades, and efficiency improvements.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Power Flushing Service</h3>
+                <p>Cold radiators? Noisy boiler? Our power flush service restores full efficiency and saves you money.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="our-work">
+        <div class="container">
+            <h2 class="section-title">Recent Projects in Fleetwood</h2>
+            <p class="section-subtitle">See the quality workmanship our customers love - real jobs, real results</p>
+            <div class="gallery" id="work-gallery">
+                                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop" alt="Full Rewire - Fleetwood Home" loading="lazy">
+                    <div class="gallery-caption">Full Rewire - Fleetwood Home</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1590642916589-592bca10dfbf?w=800&h=600&fit=crop" alt="Consumer Unit Upgrade" loading="lazy">
+                    <div class="gallery-caption">Consumer Unit Upgrade</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop" alt="Outdoor Lighting Installation" loading="lazy">
+                    <div class="gallery-caption">Outdoor Lighting Installation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621905252472-be5fb49d6782?w=800&h=600&fit=crop" alt="Socket Installation Project" loading="lazy">
+                    <div class="gallery-caption">Socket Installation Project</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop" alt="Safety Testing Completed" loading="lazy">
+                    <div class="gallery-caption">Safety Testing Completed</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=800&h=600&fit=crop" alt="Modern Light Fitting" loading="lazy">
+                    <div class="gallery-caption">Modern Light Fitting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust">
+        <div class="container">
+            <h2 class="section-title">Why Fleetwood Trusts Fleetwood Electrical Services</h2>
+            <p class="section-subtitle">Accredited, insured, and delivering excellence since 1995</p>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3>Same-Day Service</h3>
+                    <p>Call before 3pm and we'll be there today. Emergency? We're on our way within 60 minutes.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">✅</div>
+                    <h3>Part P Certified</h3>
+                    <p>Fully qualified, insured, and DBS checked. Your safety is our priority.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Fixed-price quotes before we start. No hidden fees. No surprises. Ever.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>12-Month Guarantee</h3>
+                    <p>All work covered by our comprehensive guarantee. We stand behind our workmanship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Get Your Free Quote Today</h2>
+            <p class="contact-subtitle">Call now for same-day service | No call-out fee | All work guaranteed</p>
+            
+            <div class="contact-info">
+                📞 <a href="tel:01253 123456">01253 123456</a>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <a href="tel:01253 123456" class="cta-button">📞 Call 01253 123456 Now</a>
+            </div>
+            
+            <p style="margin-top: 2.5rem; opacity: 0.95; font-size: 1.05rem;">✅ Free quotes | ✅ No hidden fees | ✅ 12-month guarantee on all work</p>
+            <p style="margin-top: 1rem; opacity: 0.9; font-size: 1rem;">Proudly serving Fleetwood, Thornton-Cleveleys, Poulton-le-Fylde & surrounding areas</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fleetwood Electrical Services | Professional Electrical Services in Fleetwood</p>
+        <p style="margin-top: 0.625rem;">24/7 Emergency Electrician | Part P Registered</p>
+    </footer>
+</body>
+</html>
