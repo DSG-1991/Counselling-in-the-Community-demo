@@ -7,9 +7,9 @@ redirects = []
 [functions."*"]
 
 [build]
-  publish       = "/home/ubuntu/clawd/projects/client-acquisition/demos/counselling-in-the-community"
+  publish       = "."
   publishOrigin = "default"
-  base          = "/home/ubuntu/clawd/projects/client-acquisition/demos/counselling-in-the-community"
+  base          = "."
 
 [build.environment]
 

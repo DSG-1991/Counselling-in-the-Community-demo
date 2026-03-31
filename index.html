@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Counselling In The Community (CITC) — affordable, accessible mental health support for children (4+), young people and adults across Blackpool &amp; the Fylde Coast. Sessions from £5. King's Award for Voluntary Service 2025.">
@@ -990,6 +991,234 @@
     map.fitBounds(group.getBounds().pad(0.15));
 })();
 </script>
+=======
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counselling in the Community</title>
+  <meta name="description" content="Affordable, compassionate counselling for everyone in Blackpool and beyond. A registered charity supporting children, young people and adults.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Variables ─────────────────────────────────────────── */
+    :root {
+      --green:       #8BAF84;
+      --green-dark:  #4A6741;
+      --green-pale:  #F3F5EF;
+      --beige:       #C9B48A;
+      --bg:          #FAFAF6;
+      --muted:       #7A8F76;
+      --white:       #FFFFFF;
+      --text:        #2E3D2B;
+      --shadow:      0 4px 24px rgba(74,103,65,0.09);
+      --radius:      16px;
+    }
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--green-dark); text-decoration: none; }
+
+    /* ── Header ────────────────────────────────────────────── */
+    header {
+      background: var(--white);
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--green-pale);
+    }
+    header img.logo {
+      width: 180px;
+      margin: 0 auto 1.5rem;
+    }
+    header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      color: var(--green-dark);
+      letter-spacing: 0.01em;
+      line-height: 1.15;
+    }
+    header p.tagline {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Sections ──────────────────────────────────────────── */
+    section {
+      padding: 4rem 1.5rem;
+    }
+    section.alt {
+      background: var(--white);
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.02em;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    /* ── Fee Cards ─────────────────────────────────────────── */
+    .fee-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .fee-list li {
+      background: var(--white);
+      border-left: 4px solid var(--green);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.2rem;
+      box-shadow: var(--shadow);
+      font-size: 0.97rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .fee-list li .fee-label {
+      font-weight: 500;
+      color: var(--text);
+    }
+    .fee-list li .fee-amount {
+      font-weight: 600;
+      color: var(--green-dark);
+      white-space: nowrap;
+    }
+    .callout {
+      border-left: 4px solid var(--beige);
+      padding: 0.8rem 1.1rem;
+      background: #fdf8f1;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── CTA Button ────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.8rem 2rem;
+      background: var(--green);
+      color: var(--white);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      border-radius: 50px;
+      transition: background 0.2s ease;
+    }
+    .btn:hover { background: var(--green-dark); color: var(--white); }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 1.8rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+    }
+    footer strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .fee-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Counselling in the Community logo" class="logo">
+    <h1>Counselling in the Community</h1>
+    <p class="tagline">Affordable, compassionate support for everyone in Blackpool and beyond</p>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>We are a registered charity providing accessible, affordable mental health support for children (aged 4+), young people, and adults. With more than 130 volunteers across four hubs, we support around 150 people every week.</p>
+        <p>No matter your background or circumstances, we believe everyone deserves access to quality counselling.</p>
+      </div>
+    </section>
+
+    <section id="fees" class="alt">
+      <div class="container">
+        <h2>Session Fees</h2>
+        <p>Our sliding scale ensures cost is never a barrier to getting support.</p>
+        <ul class="fee-list">
+          <li>
+            <span class="fee-label">Initial Assessment</span>
+            <span class="fee-amount">£10</span>
+          </li>
+          <li>
+            <span class="fee-label">Unemployed / Benefits</span>
+            <span class="fee-amount">£5</span>
+          </li>
+          <li>
+            <span class="fee-label">Income up to £20,000</span>
+            <span class="fee-amount">£10</span>
+          </li>
+          <li>
+            <span class="fee-label">Income £20,001–£30,000</span>
+            <span class="fee-amount">£20</span>
+          </li>
+          <li>
+            <span class="fee-label">Income £30,001+</span>
+            <span class="fee-amount">£30</span>
+          </li>
+        </ul>
+        <p class="callout">No one is ever turned away for financial reasons.</p>
+      </div>
+    </section>
+
+    <section id="volunteer">
+      <div class="container">
+        <h2>Get Involved</h2>
+        <p>We're always looking for volunteers, counsellors, and supporters to help us expand our reach across the community.</p>
+        <a href="https://www.counsellinginthecommunity.com" target="_blank" rel="noopener" class="btn">Visit Our Website</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>© 2026 Counselling in the Community</strong> &nbsp;·&nbsp; Registered Charity, Blackpool</p>
+  </footer>
+>>>>>>> b8f762c (redesign: align with new logo — sage green palette, Dancing Script/Raleway fonts, layout)
 
 </body>
 </html>
